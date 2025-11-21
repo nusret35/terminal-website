@@ -431,7 +431,7 @@ Created as a demonstration of modern web technologies.`,
           {entry.command && (
             <div className="command-line">
               <span className="prompt">
-                visitor@terminal-website:{entry.path}${" "}
+                visitor@nusretalikizilaslan:{entry.path}${" "}
               </span>
               <span className="command">{entry.command}</span>
             </div>

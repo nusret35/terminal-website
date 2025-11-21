@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  background-color: #1e1e1e;
+  color: #00ff00;
+  overflow: hidden;
+}
+
+.terminal {
+  height: 100vh;
+  background-color: #1e1e1e;
+  padding: 20px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.history-entry {
+  margin-bottom: 10px;
+}
+
+.command-line {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.prompt {
+  color: #00ff00;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.command {
+  color: #ffffff;
+  margin-left: 5px;
+}
+
+.output {
+  color: #cccccc;
+  margin-left: 0;
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+}
+
+.current-line {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: inherit;
+  flex: 1;
+  margin-left: 5px;
+  caret-color: #00ff00;
+}
+
+.terminal-input::selection {
+  background-color: #444;
+}
+
+/* Scrollbar styling */
+.terminal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.terminal::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.terminal::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.terminal-input:focus::after {
+  content: '';
+  animation: blink 1s infinite;
+}

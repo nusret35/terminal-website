@@ -9,12 +9,36 @@ interface HistoryEntry {
   path: string;
 }
 
+const quotes = [
+  "The only way to do great work is to love what you do.",
+  "Innovation distinguishes between a leader and a follower.",
+  "Your time is limited, don't waste it living someone else's life.",
+  "The best time to plant a tree was 20 years ago. The second best time is now.",
+  "Code is like humor. When you have to explain it, it's bad.",
+  "First, solve the problem. Then, write the code.",
+  "The computer was born to solve problems that did not exist before.",
+  "Talk is cheap. Show me the code.",
+  "Programs must be written for people to read, and only incidentally for machines to execute.",
+  "The best error message is the one that never shows up.",
+];
+
+const getRandomQuote = () => {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+};
+
 function App() {
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<HistoryEntry[]>([
     {
       command: "",
       output: title,
+      timestamp: new Date(),
+      path: "~",
+    },
+    {
+      command: "",
+      output: `Here is a quote for you: <i>${getRandomQuote()}</i>`,
       timestamp: new Date(),
       path: "~",
     },
@@ -70,7 +94,7 @@ fi`,
 
     "~/.gitconfig": `[user]
     name = visitor
-    email = visitor@terminal-website.com
+    email = visitor@nusretalikizilaslan.com
 
 [core]
     editor = nano
@@ -424,7 +448,9 @@ Created as a demonstration of modern web technologies.`,
       ))}
 
       <div className="current-line">
-        <span className="prompt">visitor@terminal-website:{currentPath}$ </span>
+        <span className="prompt">
+          visitor@nusretalikizilaslan:{currentPath}${" "}
+        </span>
         <input
           ref={inputRef}
           type="text"

@@ -1,10 +1,11 @@
-export const title = ` _   _                     _    ___  ____
+export const title = `  _   _                    _    ___  ____
  | \\ | |_   _ ___ _ __ ___| |_ / _ \\/ ___|
  |  \\| | | | / __| '__/ _ \\ __| | | \\___ \\
  | |\\  | |_| \\__ \\ | |  __/ |_| |_| |___) |
  |_| \\_|\\__,_|___/_|  \\___|\\__|\\___/|____/
 
 Welcome to NusretOS Terminal v1.0.0
+
 Type "help" to see available commands.`;
 
 export const uncannyMrIncredible = `

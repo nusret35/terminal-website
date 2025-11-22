@@ -14,32 +14,7 @@ Error generating stack: `+e.message+`
 
 Welcome to NusretOS Terminal v1.0.0
 
-Type "help" to see available commands.`,timestamp:new Date,path:`~`},{command:``,output:`Here is a quote for you: <i>${p()}</i>`,timestamp:new Date,path:`~`}]),[i,a]=(0,l.useState)(`~`),[o,s]=(0,l.useState)([]),[c,u]=(0,l.useState)(-1),f=(0,l.useRef)(null),m=(0,l.useRef)(null),h={"~":[`Documents`,`Downloads`,`Pictures`,`Projects`,`Music`,`Videos`,`Desktop`,`.bashrc`,`.profile`,`.gitconfig`,`README.md`,`CV.md`],"~/Documents":[`file1.txt`,`file2.pdf`,`notes.md`],"~/Downloads":[`setup.exe`,`image.jpg`,`archive.zip`],"~/Pictures":[`vacation.jpg`,`family.png`,`screenshot.png`],"~/Projects":[`terminal-website`,`my-app`,`scripts`],"~/Music":[`song1.mp3`,`album`,`playlist.m3u`],"~/Videos":[`movie.mp4`,`tutorial.avi`,`clips`],"~/Desktop":[`shortcut.lnk`,`temp.txt`]},g={"~/.bashrc":`# ~/.bashrc: executed by bash(1) for non-login shells.
-
-export PATH=$PATH:/usr/local/bin
-alias ll='ls -la'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Terminal colors
-export TERM=xterm-256color`,"~/.profile":`# ~/.profile: executed by the command interpreter for login shells.
-
-if [ -n "$BASH_VERSION" ]; then
-    if [ -f "$HOME/.bashrc" ]; then
-        . "$HOME/.bashrc"
-    fi
-fi`,"~/.gitconfig":`[user]
-    name = visitor
-    email = visitor@nusretalikizilaslan.com
-
-[core]
-    editor = nano
-    autocrlf = input
-
-[alias]
-    st = status
-    co = checkout
-    br = branch`,"~/README.md":`# Terminal Website
+Type "help" to see available commands.`,timestamp:new Date,path:`~`},{command:``,output:`Here is a quote for you: <i>${p()}</i>`,timestamp:new Date,path:`~`}]),[i,a]=(0,l.useState)(`~`),[o,s]=(0,l.useState)([]),[c,u]=(0,l.useState)(-1),f=(0,l.useRef)(null),m=(0,l.useRef)(null),h={"~":[`Projects`,`Music`,`Desktop`,`README.md`,`CV.md`],"~/Projects":[`terminal-website`,`my-app`,`scripts`],"~/Music":[`song1.mp3`,`album`,`playlist.m3u`],"~/Videos":[`movie.mp4`,`tutorial.avi`,`clips`],"~/Desktop":[`shortcut.lnk`,`temp.txt`]},g={"~/README.md":`# Terminal Website
 
 ## Features
 - Interactive command-line interface

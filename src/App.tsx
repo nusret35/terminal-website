@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
 import { title, uncannyMrIncredible } from "./ascii-art";
+import PersonalWebsite from "./PersonalWebsite";
 
 interface HistoryEntry {
   command: string;
@@ -36,16 +37,11 @@ function App() {
       timestamp: new Date(),
       path: "~",
     },
-    {
-      command: "",
-      output: `Here is a quote for you: <i>${getRandomQuote()}</i>`,
-      timestamp: new Date(),
-      path: "~",
-    },
   ]);
   const [currentPath, setCurrentPath] = useState("~");
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
+  const [isWebsiteMode, setIsWebsiteMode] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
 
@@ -147,7 +143,9 @@ Purpose: Testing cat command`,
   cat      - Display file contents
   rm       - Remove files and directories
   about    - About this terminal
-  whoami   - Show current user`,
+  whoami   - Show current user
+  quote    - Show a random inspirational quote
+  imnoob   - Switch to website mode`,
 
     clear: () => {
       setHistory([]);
@@ -296,6 +294,13 @@ A web-based terminal simulator built with React and TypeScript.
 Created as a demonstration of modern web technologies.`,
 
     whoami: () => "visitor",
+
+    imnoob: () => {
+      setIsWebsiteMode(true);
+      return "Switching to website mode...";
+    },
+
+    quote: () => `<i>${getRandomQuote()}</i>`,
   };
 
   const executeCommand = (cmd: string) => {
@@ -374,6 +379,10 @@ Created as a demonstration of modern web technologies.`,
   useEffect(() => {
     focusInput();
   }, []);
+
+  if (isWebsiteMode) {
+    return <PersonalWebsite onBackToTerminal={() => setIsWebsiteMode(false)} />;
+  }
 
   return (
     <div className="terminal" onClick={focusInput} ref={terminalRef}>

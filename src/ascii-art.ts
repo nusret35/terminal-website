@@ -6,7 +6,10 @@ export const title = `  _   _                    _    ___  ____
 
 Welcome to NusretOS Terminal v1.0.0
 
-Type "help" to see available commands.`;
+Type "help" to see available commands.
+
+If you don't know how to use terminal, type "imnoob" and press ENTER
+`;
 
 export const uncannyMrIncredible = `
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣶⣶⣶⣦⣤⡀⠀⠀⠀⠀⠀⠀⠀

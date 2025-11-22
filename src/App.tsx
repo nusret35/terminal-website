@@ -50,23 +50,7 @@ function App() {
   const terminalRef = useRef<HTMLDivElement>(null);
 
   const directories: Record<string, string[]> = {
-    "~": [
-      "Documents",
-      "Downloads",
-      "Pictures",
-      "Projects",
-      "Music",
-      "Videos",
-      "Desktop",
-      ".bashrc",
-      ".profile",
-      ".gitconfig",
-      "README.md",
-      "CV.md",
-    ],
-    "~/Documents": ["file1.txt", "file2.pdf", "notes.md"],
-    "~/Downloads": ["setup.exe", "image.jpg", "archive.zip"],
-    "~/Pictures": ["vacation.jpg", "family.png", "screenshot.png"],
+    "~": ["Projects", "Music", "Desktop", "README.md", "CV.md"],
     "~/Projects": ["terminal-website", "my-app", "scripts"],
     "~/Music": ["song1.mp3", "album", "playlist.m3u"],
     "~/Videos": ["movie.mp4", "tutorial.avi", "clips"],
@@ -74,37 +58,6 @@ function App() {
   };
 
   const fileContents: Record<string, string> = {
-    "~/.bashrc": `# ~/.bashrc: executed by bash(1) for non-login shells.
-
-export PATH=$PATH:/usr/local/bin
-alias ll='ls -la'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Terminal colors
-export TERM=xterm-256color`,
-
-    "~/.profile": `# ~/.profile: executed by the command interpreter for login shells.
-
-if [ -n "$BASH_VERSION" ]; then
-    if [ -f "$HOME/.bashrc" ]; then
-        . "$HOME/.bashrc"
-    fi
-fi`,
-
-    "~/.gitconfig": `[user]
-    name = visitor
-    email = visitor@nusretalikizilaslan.com
-
-[core]
-    editor = nano
-    autocrlf = input
-
-[alias]
-    st = status
-    co = checkout
-    br = branch`,
-
     "~/README.md": `# Terminal Website
 
 ## Features

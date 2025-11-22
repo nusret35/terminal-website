@@ -107,8 +107,6 @@ fi`,
 
     "~/README.md": `# Terminal Website
 
-A web-based terminal simulator built with React and TypeScript.
-
 ## Features
 - Interactive command-line interface
 - File system navigation
@@ -116,7 +114,7 @@ A web-based terminal simulator built with React and TypeScript.
 - Responsive design
 
 ## Available Commands
-- ls, cd, pwd
+- ls, cd, pwd, rm
 - cat, echo, date
 - help, clear, about
 
